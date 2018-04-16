@@ -20,7 +20,7 @@
             name:  heroes-db-cntnr
         ```
 
-2. Edit `heroes-web-api.yaml` using vi or nano
+2. Edit `heroes-web-api.yaml` using nano or vi
     ```
     cd ~/aks-workshop/labs/helper-files
 
