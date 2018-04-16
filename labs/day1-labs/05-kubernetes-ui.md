@@ -17,8 +17,8 @@ There are multiple ways of accessing Kubernetes dashboard. You can access throug
     * Run ``` unzip ngrok.zip ``` to unzip ngrok.
     * Run ```kubectl proxy```
     * This creates a local proxy to 127.0.0.1:8001
-    * In other terminal with SSH to the same VM run  ./ngrok http 8001 -host-header="localhost:8001"
-    * Then browse  https://******.ngrok.io/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/#!/cluster?namespace=default
+    * In other terminal with SSH to the same VM run  ```./ngrok http 8001 -host-header="localhost:8001"```
+    * Then browse: <https://******.ngrok.io/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/#!/cluster?namespace=default>
 
 ### Explore Kubernetes Dashboard
 
