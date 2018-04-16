@@ -11,7 +11,7 @@ There are multiple ways of accessing Kubernetes dashboard. You can access throug
 1. Command-Line Proxy
 
     * On the terminal VM:
-    * Run ```cd /``` 
+    * Run ```cd /home/<user>``` 
     * Run ```curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > ngrok.zip``` to download ngrok in the Linux VM.
     * Run ```sudo apt-get install unzip``` to install unzip.
     * Run ``` unzip ngrok.zip ``` to unzip ngrok.
