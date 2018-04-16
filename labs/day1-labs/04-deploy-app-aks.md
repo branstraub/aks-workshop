@@ -2,11 +2,11 @@
 
 ## Review/Edit the YAML Config Files
 
-1. Edit `heroes-db.yaml` using nano or vi
+1. Edit `heroes-db.yaml` using nano
     ```
     cd ~/aks-workshop/labs/helper-files
 
-    vi heroes-db.yaml
+    nano heroes-db.yaml
     ```
     * Review the yaml file and learn about some of the settings
     * Update the yaml file for the proper container image name
@@ -20,11 +20,11 @@
             name:  heroes-db-cntnr
         ```
 
-2. Edit `heroes-web-api.yaml` using nano or vi
+2. Edit `heroes-web-api.yaml` using nano 
     ```
     cd ~/aks-workshop/labs/helper-files
 
-    vi heroes-web-api.yaml
+    nano heroes-web-api.yaml
     ```
     * Review the yaml file and learn about some of the settings. Note the environment variables that allow the services to connect
     * Update the yaml file for the proper container image names.
