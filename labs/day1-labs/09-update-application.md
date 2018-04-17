@@ -4,16 +4,16 @@ In this lab, we will make a change to the web application and then re-deploy the
 
 ## Update web application code
 
-1. Use the editor of your choice and browse to `~/blackbelt-aks-hackfest/app/web/src/components/`
+1. Use the editor of your choice and browse to `~/aks-workshop/app/web/src/components/`
 2. Edit code for the `Footer.vue`
-3. Find the snippet below *(line 13)* and change the text _"Azure Global Blackbelt Team"_ to your name or whatever you would like to display.
+3. Find the snippet below *(line 13)* and change the text _"Azure Global Bootcamp"_ to your name or whatever you would like to display.
 
     ```
     <div class="row at-row flex-center flex-middle">
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        Azure Global Blackbelt Team
+        Azure Global Bootcamp
       </div>
       <div class="col-lg-6">
       </div>
@@ -24,12 +24,13 @@ In this lab, we will make a change to the web application and then re-deploy the
 
 ## Create new container image and push to ACR
 
-1. Browse to `~/blackbelt-aks-hackfest/app/web`
+1. Browse to `~/aks-workshop/app/web`
 2. You should still have a Dockerfile created in an earlier lab
 3. Create a new image with an updated image tag
 
     ```
-    docker build -t rating-web:new-version .
+    sudo docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` --build-arg IMAGE_TAG_REF=new-version -t rating-web:new-version .
+    
     ```
 
 4. Tag the new image and push to your Azure Container Registry
@@ -40,11 +41,11 @@ In this lab, we will make a change to the web application and then re-deploy the
     ACR_USER=
     ACR_PWD=
 
-    docker login --username $ACR_USER --password $ACR_PWD $ACR_SERVER
+    sudo docker login --username $ACR_USER --password $ACR_PWD $ACR_SERVER
 
-    docker tag rating-web:new-version $ACR_SERVER/azureworkshop/rating-web:new-version
+    sudo docker tag rating-web:new-version $ACR_SERVER/azureworkshop/rating-web:new-version
     
-    docker push $ACR_SERVER/azureworkshop/rating-web:new-version
+    sudo docker push $ACR_SERVER/azureworkshop/rating-web:new-version
     ```
 
 5. Verify image was pushed to ACR by checking your registry in the Azure Portal
@@ -68,7 +69,7 @@ There are two ways to update the application with the new version. Both are desc
 
 3. Apply the new yaml file
     ```
-    cd ~/blackbelt-aks-hackfest/labs/helper-files
+    cd ~/aks-workshop/labs/helper-files
 
     kubectl apply -f heroes-web-api.yaml
     ```
