@@ -2,7 +2,7 @@
 
 This workshop will guide you through migrating an application from "on-premise" to containers running in Azure Kubernetes Service.
 
-The labs are based upon a node.js application that allows for voting on the Justice League Superheroes (with more options coming soon). Data is stored in MongoDB.
+The labs are based upon a node.js application that allows for voting on the Justice League Superheroes. Data is stored in MongoDB.
 
 ## Lab Guides - Day 1
   0. [Setup Lab environment](labs/day1-labs/00-lab-environment.md)
