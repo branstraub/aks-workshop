@@ -6,11 +6,12 @@ For the first container, we will be creating a Dockerfile from scratch. For the 
 
 ### Web Container
 
-1. Create a Dockerfile
+1. Create a Dockerfile 
 
     * Access the VM
-    * In the `~/aks-workshop/app/web` directory, add a file called "Dockerfile"
+    * In the `cd ~/aks-workshop/app/web` directory, add a file called "Dockerfile"
         * If you in in a SSH session, use vi or nano as the editor
+        ```nano Dockerfile```
         
     * Add the following lines and save:
 
