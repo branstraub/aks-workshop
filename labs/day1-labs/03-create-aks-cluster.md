@@ -27,7 +27,7 @@ az group create -l eastus -n aksclusterrg
 
     Name                 Location    ResourceGroup         KubernetesVersion    ProvisioningState    Fqdn
     -------------------  ----------  --------------------  -------------------  -------------------  -------------------------------------------------------------------
-    ODLaks-v2-gbb-16502  centralus   ODL_aks-v2-gbb-16502  1.7.7                Succeeded             odlaks-v2--odlaks-v2-gbb-16-b23acc-17863579.hcp.centralus.azmk8s.io
+    ODLaks-v2-gbb-16502  centralus   ODL_aks-v2-gbb-16502  1.15.5                Succeeded             odlaks-v2--odlaks-v2-gbb-16-b23acc-17863579.hcp.centralus.azmk8s.io
     ```
 
 
@@ -44,8 +44,9 @@ az group create -l eastus -n aksclusterrg
     kubectl get nodes
     
     NAME                       STATUS    ROLES     AGE       VERSION
-    aks-nodepool1-20004257-0   Ready     agent     4m        v1.7.7
-    aks-nodepool1-20004257-1   Ready     agent     4m        v1.7.7
+    aks-nodepool1-20004257-0   Ready     agent     4m        v1.15.5
+    aks-nodepool1-20004257-1   Ready     agent     4m        v1.15.5
+    aks-nodepool1-20004257-2   Ready     agent     4m        v1.15.5
     ```
     
     To see more details about your cluster: 
@@ -61,4 +62,4 @@ az group create -l eastus -n aksclusterrg
     To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
     ```
 
-You should now have a Kubernetes cluster running with 2 nodes. You do not see the master servers for the cluster because these are managed by Microsoft. The Control Plane services which manage the Kubernetes cluster such as scheduling, API access, configuration data store and object controllers are all provided as services to the nodes. 
+You should now have a Kubernetes cluster running with 3 nodes. You do not see the master servers for the cluster because these are managed by Microsoft. The Control Plane services which manage the Kubernetes cluster such as scheduling, API access, configuration data store and object controllers are all provided as services to the nodes. 
