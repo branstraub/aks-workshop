@@ -8,14 +8,14 @@ az login
 az account set --subscription "Subscription Name" 
 ```
 
-2. Create a Resource Group
+2. Create a Resource Group (replace with your resource group name)
 ```
 az group create -l eastus -n aksclusterrg
 ```
 
 3. Create your AKS cluster in the resource group created above with 3 nodes, targeting Kubernetes version 1.11.5
     ```
-    # This command can take 5-20 minutes to run as it is creating the AKS cluster. Please be PATIENT...
+    # This command can take 5-20 minutes to run as it is creating the AKS cluster. Please be PATIENT... replace again with your resource group name
     CLUSTER_NAME=akscluster
     RG=aksclusterrg
     az aks create -n $CLUSTER_NAME -g $RG -c 3 -k 1.11.5 --generate-ssh-keys -l eastus
