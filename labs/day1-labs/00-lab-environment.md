@@ -69,8 +69,4 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
 
-* GitHub account and git tools: 
 
-```
-sudo apt install git
-```
